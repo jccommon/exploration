@@ -1,4 +1,4 @@
-package com.jc.common.exploration;
+package com.jc.common.exploration.synchronizedcase;
 
 public class MyTask implements  Runnable {
     @Override

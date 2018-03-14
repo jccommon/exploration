@@ -1,4 +1,4 @@
-package com.jc.common.exploration;
+package com.jc.common.exploration.synchronizedcase;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -6,6 +6,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * synchronized关键字用法
+ */
 public class Test {
     public static volatile int i=0;
 
