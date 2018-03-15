@@ -40,7 +40,7 @@ public class Test1 {
 //
 //        ThreadPoolExecutor executor4 = new ThreadPoolExecutor(5,10,5*60, TimeUnit.SECONDS,queue,threadFactory,rejectedExecutionHandler);
 
-        // 饱和策略 丢弃
+        // 设置饱和策略
         executor1.setRejectedExecutionHandler( new ThreadPoolExecutor.CallerRunsPolicy());
 
 
