@@ -1,4 +1,4 @@
-package com.jc.common.exploration.synchronizedcase;
+package com.jc.common.exploration.threadpoolcase;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -7,15 +7,16 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * synchronized关键字用法
+ * Java线程池的分析和使用
  */
-public class Test {
-    public static volatile int i=0;
+public class Test1 {
+    public static int i=0;
 
     public static Set<Integer> set = new HashSet<Integer>();
     public static  void main(String[] args) throws InterruptedException {
         LinkedBlockingQueue queue = new LinkedBlockingQueue();
-        ThreadPoolExecutor executor1 = new ThreadPoolExecutor(100,100,5*60, TimeUnit.SECONDS,queue);
+        ThreadPoolExecutor executor1 = new ThreadPoolExecutor(5,10,5*60, TimeUnit.SECONDS,queue);
+
 
         MyThreadFactory threadFactory = new MyThreadFactory();
         ThreadPoolExecutor executor2 = new ThreadPoolExecutor(5,10,5*60, TimeUnit.SECONDS,queue,threadFactory);
@@ -38,7 +39,6 @@ public class Test {
         System.out.println("size==="+set.size());
 
     }
-
 
 
 }

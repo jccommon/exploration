@@ -1,4 +1,4 @@
-package com.jc.common.exploration.synchronizedcase;
+package com.jc.common.exploration.threadpoolcase;
 
 import java.util.concurrent.ThreadFactory;
 
