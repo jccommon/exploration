@@ -5,12 +5,17 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 
-public class Test {
+/**
+ * RecursiveTask 用于处理需要有返回结果的任务
+ */
+public class Test1 {
     public static void main(String[] args){
         ForkJoinPool forkJoinPool =new ForkJoinPool();
         CountTask task =new CountTask(1, 9);
 
         Future result = forkJoinPool.submit(task);
+
+
         try {
             System.out.println(result.get());
         } catch (InterruptedException e) {
